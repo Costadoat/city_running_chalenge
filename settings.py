@@ -1,5 +1,5 @@
-USERNAME='costadoat@crans.org'
-PASSWORD='d40;B64!'
+USERNAME=''
+PASSWORD=''
 VILLE='Paris'
 PAYS='France'
 FOLDER_COURSES='courses'

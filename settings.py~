@@ -1,6 +1,12 @@
-USERNAME='costadoat@crans.org'
-PASSWORD='d40;B64!'
+USERNAME=''
+PASSWORD=''
 VILLE='Paris'
 PAYS='France'
 FOLDER_COURSES='courses'
 FILTER_TYPE=['running']
+
+try:
+    from .local_settings import USERNAME, PASSWORD
+except ImportError:
+    pass
+        

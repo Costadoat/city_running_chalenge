@@ -1,4 +1,8 @@
 from settings import USERNAME, PASSWORD, VILLE, PAYS, FOLDER_COURSES, FILTER_TYPE
+try:
+    from .local_settings import USERNAME, PASSWORD
+except ImportError:
+    pass
 from read_gpx import read_gpx
 from gen_route import gen_route
 import os
@@ -26,7 +30,7 @@ for fichier in folder:
                 toutes_les_routes.append(route)
 
 print(toutes_les_routes)
-#ox.plot_graph_routes(G, toutes_les_routes, node_size=0,edge_color='#999999', edge_linewidth=1, edge_alpha=1,route_color='#41a725',route_linewidth=1, route_alpha=1, orig_dest_node_size=0, show=True, save=True, close=True, file_format='svg', filename='run_city_challenge', dpi=300)
+ox.plot_graph_routes(G, toutes_les_routes, node_size=0,edge_color='#999999', edge_linewidth=1, edge_alpha=1,route_color='#41a725',route_linewidth=1, route_alpha=1, orig_dest_node_size=0, show=True, save=True, close=True, file_format='svg', filename='run_city_challenge', dpi=300)
             
             
 

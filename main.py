@@ -1,4 +1,8 @@
 from settings import USERNAME, PASSWORD, VILLE, PAYS, FOLDER_COURSES, FILTER_TYPE
+try:
+    from local_settings import USERNAME, PASSWORD
+except ImportError:
+    pass
 from read_gpx import read_gpx
 from gen_route import gen_route
 import os
